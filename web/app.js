@@ -400,7 +400,7 @@ canvas.addEventListener('blur', drawOverlay);
 
 const tabs = [...document.querySelectorAll('.rt-tabs [role=tab]')];
 function selectTab(tab, focus = false) {
-  for (const t of tabs) {const on = t === tab; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; $(t.getAttribute('aria-controls')).hidden = !on;}
+  for (const t of tabs) {const on = t === tab; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; document.getElementById(t.getAttribute('aria-controls')).hidden = !on;}
   if (focus) tab.focus();
 }
 tabs.forEach((tab, i) => {
