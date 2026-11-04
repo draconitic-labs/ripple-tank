@@ -45,7 +45,7 @@ python3 scripts/verify-import-controls.py
 python3 -m http.server --bind 127.0.0.1 --directory web 8080
 ```
 
-For the Python frontend, install a distribution-provided PySide6 or PySide6==6.11.1 in your own environment. To bundle the desktop, use PyInstaller6.16.0 with `--onedir --add-binary target/release/libflintglade_ripple.so:. desktop/ripple.py`; the release script supplies the exact build procedure, license files and inventory. The dynamic Qt libraries and Rust library can be replaced/rebuilt independently. No background services are needed.
+For the Python frontend, install a distribution-provided PySide6 or PySide6==6.11.1 in your own environment. To bundle the desktop, use PyInstaller6.22.3 with `--onedir --add-binary target/release/libflintglade_ripple.so:. desktop/ripple.py`; the release script supplies the exact build procedure, license files and inventory. The dynamic Qt libraries and Rust library can be replaced/rebuilt independently. No background services are needed.
 
 Project code is MIT licensed. Bundled runtimes retain their respective licenses; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
