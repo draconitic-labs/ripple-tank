@@ -4,7 +4,7 @@ A gravity–capillary wave workspace from Flintglade Labs. A shared Rust engine 
 
 Draw obstacles and depth changes, create coherent sources, change gravity/tension/drag and boundaries, measure a surface probe, and save complete reproducible experiments. The engine uses a conservative staggered mesh and velocity Verlet in physical units. [Numerics](docs/NUMERICS.md) explains the equations, tests and interpretation.
 
-[Browser instrument](https://flintglade.com/labs/ripple-tank) · [Versioned downloads](https://github.com/flintglade-tools/ripple-tank/releases)
+[Browser instrument](https://draconitic.com/labs/ripple-tank) · [Versioned downloads](https://github.com/draconitic-labs/ripple-tank/releases)
 
 ## Fedora desktop
 
