@@ -1,6 +1,10 @@
-# Verification — Ripple Tank 0.1.0
+# Verification — Ripple Tank 0.1.1
 
 The numerical engine, native Qt interface, CLI and worker-based browser implementation share a tested Rust core. The measurements below were made on the Fedora target machine using synthetic experiments.
+
+## 0.1.1 rebuild
+
+Since 0.1.0, names, contact addresses, the copyright holder and the version changed; the browser's tab panels are looked up with `document.getElementById` directly instead of the equivalent `$` helper (a CodeQL finding); and the desktop bundler moved from PyInstaller 6.16.0 to 6.22.3. The numerical engine and the Qt interface code are unchanged. The 0.1.1 desktop archive was built on Fedora 44 x86_64, Linux 7.2.15, with Rust 1.96.1, Python 3.14.10, PySide6 6.11.2 (Fedora RPM) and PyInstaller 6.22.3. Before packaging, the 12 Rust tests, strict Clippy and formatting checks passed; native/WebAssembly parity passed on 11 commands and 5 fields with maximum absolute difference 9.54e-18; the 19 Qt workflow checks and 6 import/probe/layout regression cases passed offscreen. The measurements and reviews in the sections below were recorded for 0.1.0.
 
 ## Target
 

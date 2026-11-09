@@ -118,7 +118,7 @@ def main():
         quoted = executable.replace("\\", "\\\\").replace('"', '\\"').replace('`', '\\`').replace('$', '\\$')
         exe = ('"'+quoted+'"').replace("\\", "\\\\")
         icon = str(prefix/"ripple.svg").replace("\\", "\\\\")
-        desktop = f'[Desktop Entry]\nType=Application\nName=Ripple Tank\nComment=Flintglade gravity-capillary wave workspace\nExec={exe}\nIcon={icon}\nTerminal=false\nCategories=Education;Science;Physics;\nX-Flintglade-Ripple-Install-ID={install_id}\n'
+        desktop = f'[Desktop Entry]\nType=Application\nName=Ripple Tank\nComment=Draconitic Labs gravity-capillary wave workspace\nExec={exe}\nIcon={icon}\nTerminal=false\nCategories=Education;Science;Physics;\nX-Flintglade-Ripple-Install-ID={install_id}\n'
         record = {"application": "flintglade-ripple", "install_id": install_id, "menu": str(menu),
                   "menu_sha256": hashlib.sha256(desktop.encode()).hexdigest(), "files": files, "directories": directories}
         with marker.open("x") as f:

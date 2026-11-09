@@ -11,7 +11,7 @@ import tomllib
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--desktop",action="store_true")
-parser.add_argument("--site-path",type=Path,help="Optional isolated Flintglade source checkout to synchronize")
+parser.add_argument("--site-path",type=Path,help="Optional isolated website source checkout (publisher/labs) to synchronize")
 args=parser.parse_args()
 version=tomllib.loads((root/"Cargo.toml").read_text())["package"]["version"]
 for extra in [[],["--lib","--target","wasm32-unknown-unknown"]]:

@@ -595,7 +595,7 @@ class Trace(W.QWidget):
 class Window(W.QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Ripple Tank · Flintglade Labs")
+        self.setWindowTitle("Ripple Tank · Draconitic Labs")
         self.setMinimumSize(960, 680)
         self.resize(1320, 860)
         self.engine = Engine()
@@ -1415,7 +1415,7 @@ def configure(app):
 def main():
     app = W.QApplication(sys.argv)
     configure(app)
-    app.setApplicationName("Flintglade Ripple Tank")
+    app.setApplicationName("Ripple Tank")
     try:
         window = Window()
         window.show()

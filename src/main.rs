@@ -49,7 +49,7 @@ fn main() -> std::process::ExitCode {
 }
 fn run() -> Result<(), String> {
     let a: Vec<String> = env::args().collect();
-    let usage="Ripple Tank 0.1.0\n  ripple new PRESET OUTPUT.ripple.json [CONFIG.json]\n  ripple run INPUT.ripple.json STEPS OUTPUT.ripple.json [FIELD.csv]\n  ripple inspect INPUT.ripple.json\n  ripple bench [NX NY STEPS]\n  ripple serve  # newline-delimited JSON command protocol on stdin/stdout\nOutputs never overwrite existing files; SI units, model and version are stored in each state.";
+    let usage=concat!("Ripple Tank ",env!("CARGO_PKG_VERSION"),"\n  ripple new PRESET OUTPUT.ripple.json [CONFIG.json]\n  ripple run INPUT.ripple.json STEPS OUTPUT.ripple.json [FIELD.csv]\n  ripple inspect INPUT.ripple.json\n  ripple bench [NX NY STEPS]\n  ripple serve  # newline-delimited JSON command protocol on stdin/stdout\nOutputs never overwrite existing files; SI units, model and version are stored in each state.");
     if a.len() < 2 || ["--help", "-h", "help"].contains(&a[1].as_str()) {
         println!("{usage}");
         return Ok(());
